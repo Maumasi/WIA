@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alaska</title>
+<!-- dependency scripts -->
+		<script src="js/dependencies/modernizr.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+        <script src="js/dependencies/jquery-1.10.1.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script src="js/dependencies/mapster.js"></script>
+	    <script src="js/dependencies/map-options.js"></script>
+	    <script src="js/dependencies/smoothScroll.js"></script>
+<!-- 		styles -->
+		<link href= "css/main.css" rel= "stylesheet"/>
+	</head>
+	
+	<body>
+		<nav>
+	        <h1>Edge of the world</h1>
+	        <ul>
+	          <li><a href="#siteEntry">Destinations</a></li>
+	          <li><a href="#">Community</a></li>
+	          <li><a href="#footer">Contact</a></li>
+	          <li><a href="#destinationList">Plan a trip</a></li>
+	        </ul>
+	    </nav>
+	    
+<!-- 	Video Hero section -->
+		<div>
+			<video autoplay loop>
+				<source src="assets/video/IceClimer.mp4" type="video/mp4" />
+				Video is not supported!
+			</video>
+			<a href="#siteEntry">&xvee;</a>
+		</div>
+		
+<!-- 	Entry points -->
+		<ul id="siteEntry">
+			<li>
+				<a href="#"></a>
+			</li>
+
+			<li>
+				<a href="#"></a>
+			</li>
+			
+			<li>
+				<a href="#"></a>
+			</li>
+		</ul>
+
+	    <section class="wrapper">
+		    <div class="wrapper2">
+				<section class="content">					  
+					<div class="destinations">
+						<ul id="destinationList">
+							<li> 
+								<a 
+									data-lat="51.9540386" 
+									data-lng="-120.1767826" 
+									data-skill-Ex="5.75" 
+									data-skill-Special="5.1" 
+									data-skill-Fit="5.75"
+									data-article=".Helmcken-Falls"
+									data-content="Helmcken Falls, British Columbia"
+									class="showDestination currentlySelected"
+									href="#destinationList">Helmcken Falls
+								</a> 
+							</li>
+							
+							<li> 
+								<a 
+									data-lat="37.837601" 
+									data-lng="-83.689326" 
+									data-skill-Ex="2.75" 
+									data-skill-Special="2.1" 
+									data-skill-Fit="3.5"
+									data-article=".Red-River"
+									data-content="Red River Gorge, Kentucky"
+									class="showDestination" 
+									href="#destinationList">Red River G.
+								</a> 
+							</li>
+							
+							<li> 
+								<a 
+									data-lat="44.3396" 
+									data-lng="-68.2581" 
+									data-skill-Ex="1.5" 
+									data-skill-Special="1.5" 
+									data-skill-Fit="1.75"
+									data-article=".acadia"
+									data-content="Acadia National Park, Main"
+									class="showDestination" 
+									href="#destinationList">Acadia N. P.
+								</a> 
+							</li>
+							
+							<li> 
+								<a 
+									data-lat="39.7213693" 
+									data-lng="-107.6892298" 
+									data-skill-Ex="3.1" 
+									data-skill-Special="4.5" 
+									data-skill-Fit="5.5"
+									data-article=".rifleMt"
+									data-content="Rifle Mountain Park, Colorado"
+									class="showDestination" 
+									href="#destinationList">Rifle Mt.
+								</a> 
+							</li>
+							
+							<li> 
+								<a 
+									data-lat="37.7340" 
+									data-lng="-119.6370" 
+									data-skill-Ex="4.5" 
+									data-skill-Special="3.1" 
+									data-skill-Fit="4.1"
+									data-article=".el-capitan"
+									data-content="El Capitan Yosemite National Park, California"
+									class="showDestination" 
+									href="#destinationList">El Capitan
+								</a> 
+							</li>
+						</ul>
+					</div>
+					
+					<div class="vizInfo">
+				    	<div id="map"></div>
+				      
+				<!-- 	chart -->
+						<canvas id="chart"></canvas>
+					</div>
+					
+			<!-- Description container -->
+					<section>
+						<article class="description Helmcken-Falls">
+							<h3>Helmcken Falls</h3>
+							<p>Most tourists see Helmcken Falls in summer. A winter visit is worthwhile because the ice cone at the base often grows to 50 m tall and sometimes even higher in very cold snowy winters. It has occasionally been seen reaching halfway up the falls. The best time to view the ice cone is from late January to the end of February. The cone collapses inward sometime during March and some remnants are still visible in June. The road is plowed and sanded in winter and volunteers maintain the trails. Snow tires are essential and tire chains are recommended as a safety precaution. A network of cross-country ski trails starts near Dawson Falls, but there has been no grooming since the winter of 2011-12.</p>
+							<p>Helmcken Falls drops over the western escarpment of the Murtle Plateau. This huge lava deposit in the Wells Gray-Clearwater volcanic field was erupted from nearby fissures starting 200,000 years ago and filled the wide valley of the Clearwater River. Layer upon layer of fresh lava created the plateau, then enormous floods eroded the lava at the close of the last ice age, about 10,000 years ago. These floods created Helmcken Canyon below the falls.</p>
+						</article>
+						
+						<article class="description Red-River">
+							<h3>Red River Gorge</h3>
+							<p>The Red River Gorge is a canyon system on the Red River in east-central Kentucky. Geologically, it is part of the Pottsville Escarpment. Much of the Gorge is located inside the Daniel Boone National Forest and has been subsequently reserved as the Red River Gorge Geological Area, an area of around 29,000 acres (120 km2; 45 sq mi). It has been designated a National Natural Landmark and National Archaeological District, and it is listed on the National Register of Historic Places. The 13,379-acre (54.14 km2; 20.905 sq mi) Clifty Wilderness Area lies entirely within the geological area in the Red River Gorge.</p>
+							<p>This intricate canyon system features an abundance of high sandstone cliffs, rock shelters, waterfalls, and natural bridges. There are more than 100 natural sandstone arches in the Red River Gorge Geological Area. The multitude of sandstone and cliff-lines have helped this area become one of the world's top rock climbing destinations and is home to the Red River Gorge Climbers' Coalition. The area is nicknamed the Red by climbers.</p>
+							<p>Kentucky's Natural Bridge State Park is immediately adjacent to this area, featuring one of the largest natural bridges in the Red River Gorge.</p>
+						</article>
+						
+						<article class="description acadia">
+							<h3>Acadia National Park</h3>
+							<p>The landscape architect Charles Eliot is credited with the idea for the park. George B. Dorr, called the "father of Acadia National Park," along with Eliot's father Charles W. Eliot (the president of Harvard), supported the idea both through donations of land and through advocacy at the state and federal levels. It first attained federal status when President Woodrow Wilson established it as Sieur de Monts National Monument on July 8, 1916, administered by the National Park Service. On February 26, 1919, it became a national park, with the name Lafayette National Park in honor of the Marquis de Lafayette, an influential French supporter of the American Revolution. The park's name was changed to Acadia National Park on January 19, 1929, in honor of the former French colony of Acadia which once included Maine.</p>
+							<p>From 1915 to 1933, the wealthy philanthropist John D. Rockefeller, Jr. financed, designed, and directed the construction of a network of carriage trails throughout the park. He sponsored the landscape architect Beatrix Farrand, with the nearby family summer home Reef Point Estate, to design the planting plans for the subtle carriage roads at the park (c. 1930). The network encompassed over 50 miles (80 km) of gravel carriage trails, 17 granite bridges, and two gate lodges, almost all of which are still maintained and in use today. Cut granite stones placed along the edges of the carriage roads act as guard rails of sort and are locally known as "coping stones" to help visitors cope with the steep edges. They are also known as "Rockefeller's Teeth".</p>
+							<p>Beginning on October 17, 1947, 10,000 acres (4,000 ha) of Acadia National Park burned in a fire that began along the Crooked Road several miles west of Hulls Cove. The forest fire was one of a series of fires that consumed much of Maine's forest as a result of a dry year. The fire burned until November 14, and was fought by the Coast Guard, Army, Navy, local residents, and National Park Service employees from around the country. Restoration of the park was supported, substantially, by the Rockefeller family, particularly John D. Rockefeller, Jr. Regrowth was mostly allowed to occur naturally and the fire has been suggested to have actually enhanced the beauty of the park, adding diversity to tree populations and depth to its scenery.</p>
+						</article>
+						
+						<article class="description rifleMt">
+							<h3>Rifle Mt. Park</h3>
+							<p>Rifle Mountain Park, located 12 miles north of Rifle, is maintained by the City of Rifle. It is popular with rock climbers. Other outside attractions near the city include Rifle Falls State Park, Rifle Falls Fish Hatchery, Rifle Gap State Park, and Harvey Gap State Park.
+Six miles north of the center of the city is Rifle Creek Golf Course.
+in 2014, the New Ute theater was opened in downtown Rifle.
+Rifle is home to the Garfield County Fair Grounds. One week out of the year, the city bustles with activities surrounding family and professional rodeos, Xtreme bull riding, live music, and a demolition derby.</p>
+						</article>
+						
+						<article class="description el-capitan">
+							<h3>El Capitan, <br/>
+								Yosemite N. P.</h3>
+							<p>El Capitán (Spanish for The Captain, The Chief) is a vertical rock formation in Yosemite National Park, located on the north side of Yosemite Valley, near its western end. The granite monolith extends about 3,000 feet (900 m) from base to summit along its tallest face and is one of the world's favorite challenges for rock climbers and BASE jumpers.</p>
+							<p>The formation was named "El Capitán" by the Mariposa Battalion when it explored the valley in 1851. El Capitán ("the captain", "the chief") was taken to be a loose Spanish translation of the local Native American name for the cliff, variously transcribed as "To-to-kon oo-lah" or "To-tock-ah-noo-lah". It is unclear if the Native American name referred to a specific tribal chief or simply meant "the chief" or "rock chief". In modern times, the formation's name is often contracted to "El Cap", especially among rock climbers and BASE jumpers.</p>
+							<p>The top of El Capitán can be reached by hiking out of Yosemite Valley on the trail next to Yosemite Falls, then proceeding west. For climbers, the challenge is to climb up the sheer granite face; there are many named climbing routes, all of them arduous. Some of these include the iron hawk route, the sea of dreams route, etc.</p>
+						</article>
+					</section>
+				</section> <!-- close -->
+				
+<!-- 	Saving this section for an img gallery			----------------  !!!	 -->
+				
+			<section class="gallery">
+				<h3><span>Gallery</span></h3>
+				<ul id="gallery">
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Llanberis_Pass_1000.jpg" data-description="Rock face in a mountain pass"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/rock-climbing_1000.jpg" data-description="Rock climber scaling a rock wall"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Kata_Tjuta_rock_face_1000.jpg" data-description="Red rock face in a mountain pass"></a></li>
+					
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/rock-climbing_1000.jpg" data-description="Rock face on a beach"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Llanberis_Pass_1000.jpg" data-description="Rock face in a mountain pass"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/rock-climbing_1000.jpg" data-description="Rock climber scaling a rock wall"></a></li>
+					
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Llanberis_Pass_1000.jpg" data-description="Rock face in a mountain pass"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Kata_Tjuta_rock_face_1000.jpg" data-description="Rock climber scaling a rock wall"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Kata_Tjuta_rock_face_1000.jpg" data-description="Red rock face in a mountain pass"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/rock-climbing_1000.jpg" data-description="Rock face on a beach"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/Llanberis_Pass_1000.jpg" data-description="Rock face in a mountain pass"></a></li>
+					<li class="galleryItem"><a href="#" data-source="assets/imgs/rock-climbing_1000.jpg" data-description="Rock climber scaling a rock wall"></a></li>
+				</ul>
+			</section>
+			
+		    </div><!-- close wrapper2 -->
+	    </section><!-- close wrapper -->
+	    
+	    
+<!-- 	Gallery Pop-up -->
+	    <div id="imgPopUp">
+		    <img src="" alt="" />
+		    <a class="closeImgModal closeTab" href="#">Close</a>
+		    <a class="closeImgModal modalBackground" href="#">Close image</a>
+	    </div>
+	    
+	    <footer id="footer">
+	    	<h2>Edge of the world <span>TM</span></h2>
+	    	
+	    	<!-- 		Contact form -->
+			<form action="" id="contactForm">
+				<h3>Contact us</h3>
+				
+				<input type="text" placeholder="Name" required/>
+			
+				<input type="text" placeholder="Email" required/>
+				
+				<input type="text" placeholder="Subject" required/>
+								
+				<textarea form="#contactForm" placeholder="Got something to say?  Tell us about it." ></textarea>
+				
+				<input type="submit" value="Send"/>
+				
+					<address>
+						<h3>Address</h3>
+						<p>123 Big Earth Ct. Suite 16<br/>
+							Mt. Rainier, Wa.<br/>
+							54321<br/>
+							Tel: <a href="tel:+555 555 5555">(555) 555-5555</a></p>
+						
+						
+					</address>
+			</form>
+	    </footer>
+
+<!--   script -->
+	    <script src="js/main.js"></script>
+	    
+	<!-- Smooth scroll call     -->
+	    <script>
+	    $(document)
+	    .on('click', 'a[href*="#"]', function(e) {
+	      if ( this.hash && this.pathname === location.pathname ) {
+//	        $.bbq.pushState( '#/' + this.hash.slice(1) );
+	        return false;
+	      }
+	    })
+	    .ready(function() {
+	      $(window).bind('hashchange', function(event) {
+	        var tgt = location.hash.replace(/^#\/?/,'');
+	        if ( document.getElementById(tgt) ) {
+	          $.smoothScroll({scrollTarget: '#' + tgt});
+	        }
+	      });
+	      $(window).trigger('hashchange');
+	    });
+	    
+	    
+	    $('a').smoothScroll();
+	    $('a').smoothScroll({excludeWithin: ['.sass']});
+	  </script>	
+	</body>
+</html>
