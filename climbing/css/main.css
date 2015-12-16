@@ -135,6 +135,32 @@ body > div:first-of-type video + a:hover {
   }
 }
 
+#emailSignUp {
+  background: url(../assets/imgs/sos.png) repeat;
+  height: 5rem;
+  border-top: 2px solid #757a87;
+  border-bottom: 5px solid #757a87;
+  margin-top: -3rem;
+}
+#emailSignUp > p {
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.2rem;
+}
+#emailSignUp > p > a {
+  color: #FBCB43;
+  padding: 0.25rem;
+  border-bottom: 2px solid #FBCB43;
+}
+#emailSignUp #freeTrip {
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: #FBCB43;
+  text-transform: uppercase;
+}
+
 ul#siteEntry {
   position: relative;
   z-index: 2;
@@ -248,6 +274,68 @@ div.destinations ul li a:hover, div.destinations ul li a.currentlySelected {
   border: 2px solid #fff;
 }
 
+#emailOptinPopUp {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#emailOptinPopUp form {
+  margin: 0 auto;
+  margin-top: 10vw;
+  float: none;
+  height: 45%;
+}
+#emailOptinPopUp form input {
+  width: 50%;
+  margin-left: 25%;
+  float: none;
+}
+#emailOptinPopUp form h3 {
+  text-align: center;
+  float: none;
+}
+#emailOptinPopUp form p {
+  text-align: center;
+  width: 100%;
+  float: none;
+}
+#emailOptinPopUp form a {
+  width: 50%;
+}
+#emailOptinPopUp form > div {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto;
+}
+#emailOptinPopUp form > div input {
+  width: auto;
+  float: left;
+  margin-left: 0;
+  cursor: pointer;
+}
+#emailOptinPopUp form > div a {
+  float: right;
+  display: block;
+  width: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #757a87;
+}
+#emailOptinPopUp form > div a:hover {
+  color: #333;
+}
+#emailOptinPopUp form > div a > span {
+  border-bottom: 1px solid #757a87;
+}
+#emailOptinPopUp form > div a > span:hover {
+  border-bottom: 1px solid #333;
+}
+
 section.wrapper > div.wrapper2 > section > div.vizInfo {
   box-shadow: 0 0 10px 1px black;
   padding: 1rem;
@@ -329,6 +417,9 @@ section.wrapper > div.wrapper2 > section.content::after {
 section.gallery {
   width: 90%;
   margin: 0 auto;
+}
+section.gallery .imgLoad {
+  display: none;
 }
 section.gallery h3 {
   background: rgba(0, 0, 0, 0.4);

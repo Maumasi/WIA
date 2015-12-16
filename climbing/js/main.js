@@ -63,7 +63,6 @@
     
 // Gallery -------------------------------------------
 //----------------------------------------------------
-// working only on localhost
 			
 			
 			$("ul#gallery > li").each(function(){
@@ -142,12 +141,34 @@
 	});
 	
 // Close Modal
-		$(".closeImgModal").on("click", function(e){
-			e.preventDefault();
-			
-			var $imgModal = $("#imgPopUp");
-			$($imgModal).fadeOut(300);
-		});
+	$(".closeImgModal").on("click", function(e){
+		e.preventDefault();
+		
+		var $imgModal = $("#imgPopUp");
+		$($imgModal).fadeOut(300);
+	});
+	
+// Email opt-in -------------------------------------------
+//---------------------------------------------------------
+
+	$('#signUp').on('click', function(e){
+		e.preventDefault();
+		
+		$('#emailOptinPopUp').fadeIn();
+	});
+
+	$('#email-choice > input[type="submit"]').on("click", function(e){
+		e.preventDefault();
+		
+		$('#emailOptinPopUp').fadeOut();		
+	});
+	
+	$('#email-choice > a').on("click", function(e){
+		e.preventDefault();
+		
+		$('#emailOptinPopUp').fadeOut();		
+	});
+		
 	
 	
 }(window, window.Mapster, jQuery, google));
